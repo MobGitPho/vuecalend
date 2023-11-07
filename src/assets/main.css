@@ -9,6 +9,7 @@ body {
   margin: auto;
   overflow-x: hidden;
   font-family: "Times New Roman", Times, serif;
+  background-color: #ffff;
 }
 
 #app {

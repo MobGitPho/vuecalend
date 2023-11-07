@@ -13,38 +13,64 @@ export const useCourStore = defineStore('cours', {
 
     }),
     actions: {
-        addChoice(tab, hor, jr,i) {
-            let idc = hor + "-" + jr 
-            let idci = hor + "-" + jr + "-" + i 
+        addChoice(tab, hor, jr, i) {
+            let resultadd = []
+            let idc = hor + "-" + jr
+            let idci = hor + "-" + jr + "-" + i
             let choix = ({ ...tab, idc: idc, idci: idci, hor: hor, jour: jr, activ: 1, totprice: tab.price })
-            let fnd = this.courChoix.find(p => p.id == choix.id)
+            let fndidci = this.courChoix.find(p => p.idci == choix.idci)
 
-            //var x = document.getElementById("snackbar");
-            if (fnd != undefined) {
-                ''
-            } else {
-                let fndidc = this.courChoix.find(p => p.idc == choix.idc)
-                //console.log('fndidc',fndidc);
-                if (fndidc != undefined) {
-                    let fnda = this.courChoix.find(p => p.idc == choix.idc)
-                    //console.log('fnda',fnda.idc);
-                    this.courChoix.splice(fnda, 1);
+            //console.log('courChoix',this.courChoix);
+            if (fndidci != undefined) {
+                // idci exist 1-2-1
+
+                // Cours deja select donc on verifie son idc 1-2
+                let fndidcidel = this.courChoix.find(p => p.idc == fndidci.idc)
+
+                if (fndidcidel != undefined) {
+                    let del = this.courChoix.find(p => p.idci == choix.idci)
+                    let posdel = this.courChoix.indexOf(del)
+                    this.courChoix.splice(posdel, 1)
+
+                    localStorage.setItem("coursChoix", JSON.stringify(this.courChoix))
+                    resultadd = JSON.parse(localStorage.getItem('coursChoix'))
                 } else {
-                    let fndcid = this.courChoix.find(p => p.id == choix.id)
-                    //console.log('fndcid',fndcid);
-                    if (fndcid != undefined) {
-                        let fnd = this.courChoix.find(p => p.id == choix.id)
-                        this.courChoix.splice(fnd, 1);
+                    console.log('CR EXIST idc NOT IDTQ')
 
-                    } else {
-                        this.courChoix.push(choix)
-                    }
                 }
 
-            }
+            } else {
+                // Le cours n'existe pas dans les courChoix
+                let del = this.courChoix.find(p => p.idc == choix.idc)
 
-            localStorage.setItem("coursChoix", JSON.stringify(this.courChoix))
-            let resultadd = JSON.parse(localStorage.getItem('coursChoix'))
+                if (del != undefined) {
+                  
+                    let delc = this.courChoix.find(p => p.idci == del.idci)
+                    console.log('delc',delc);
+                    let posdelc = this.courChoix.indexOf(delc)
+
+                    console.log('posdelc',posdelc);
+
+                    this.courChoix.splice(posdelc, 1)
+
+                    this.courChoix.push(choix)
+
+
+                    localStorage.setItem("coursChoix", JSON.stringify(this.courChoix))
+                    resultadd = JSON.parse(localStorage.getItem('coursChoix'))
+
+                } else {
+                    //idc# idci#
+                    this.courChoix.push(choix)
+
+                    localStorage.setItem("coursChoix", JSON.stringify(this.courChoix))
+                    resultadd = JSON.parse(localStorage.getItem('coursChoix'))
+                }
+
+
+
+
+            }
 
             return resultadd
         },
@@ -93,7 +119,7 @@ export const useCourStore = defineStore('cours', {
             let fnd = state.courChoix.filter(p => p.activ == 1)
 
             //console.log("mesCoursActiv", fnd);
-            const dataToReturn= fnd.map((item) => item.idci)
+            const dataToReturn = fnd.map((item) => item.idci)
             //console.log({dataToReturn})
             return dataToReturn
         },
