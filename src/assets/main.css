@@ -1,0 +1,22 @@
+/*@import './base.css';*/
+
+*{
+  font-family: 'Times New Roman', Times, serif;
+  box-sizing: border-box;
+}
+body {
+  display: block;
+  margin: auto;
+  overflow-x: hidden;
+  font-family: "Times New Roman", Times, serif;
+}
+
+#app {
+ 
+  margin: 0 auto;
+  padding: 1rem;
+
+  font-weight: normal;
+}
+
+
