@@ -304,7 +304,7 @@ export default {
     text-align: center;
     font-size: 2em;
     font-weight: bold;
-    margin-bottom: 4%;
+    margin-bottom: 2%;
 }
 
 .linebrand {
@@ -382,13 +382,14 @@ export default {
 .calend {
     width: 100%;
     height: auto;
-    margin-bottom: 5%;
+    margin-bottom: 1.5%;
 
     table {
         width: 100%;
         height: auto;
-        border: 1px solid black;
+        border: 1px solid gray;
         border-spacing: 1px;
+        border-spacing: 0px;
 
         th {
             width: 12.5%;
@@ -400,7 +401,7 @@ export default {
         }
 
         .tbody {
-            border: 1px solid black;
+            border: 1px solid gray;
             border-spacing: 1px;
             cursor: pointer;
 
@@ -408,7 +409,7 @@ export default {
                 width: auto;
                 height: auto;
                 border-spacing: 1px;
-                border: 1px solid black;
+                border: 1px solid gray;
                 padding: 15px;
 
                 .horaire {
@@ -424,7 +425,7 @@ export default {
                     padding: 5px;
                     width: auto;
                     height: auto;
-                    border: 1px solid black;
+                    border: 1px solid gray;
                     //padding: 10px;
 
 
@@ -440,6 +441,10 @@ export default {
                         cursor: pointer;
                         color: black;
                         //padding: 5px;
+                        padding-top: 10px;
+                    padding-bottom: 10px;
+                    padding-left: 10px;
+                    padding-right: 10px;
 
                         &.active {
                             background-color: #fd0c2c;

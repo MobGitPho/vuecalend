@@ -15,12 +15,12 @@
                         <input type="text" id="lname" name="Nom" pattern="^[A-Za-z]+$" v-model="lastname">
                         <label id="Nom" class="falseM"></label><br-->
 
-                            <label for="lname">Email</label>
-                            <input type="email" id="" name="Email" v-model="mail">
-                            <label id="femail" class="falseM"></label><br>
+                            <!--label for="lname">Email</label-->
+                            <input type="email" placeholder="Email" id="" name="Email" v-model="mail">
+                            <label id="femail"  class="falseM"></label><br>
 
-                            <label for="lname">Mot de Passe</label>
-                            <input type="text" id="" name="Nom" v-model="password">
+                            <!--label for="lname">Mot de Passe</label-->
+                            <input type="password" placeholder="Password" id="" name="Nom" v-model="password">
                             <label id="Nom" class="falseM"></label><br>
 
                             <!--label for="lname">Confirmation Mot de Passe</label>
@@ -106,14 +106,18 @@ export default {
         padding: 5px auto;
         width: 60%;
         height: auto;
-        border: 5px solid #3e28e9;
+        border: 5px solid #b9b6b6;
         border-radius: 5px;
-        border-color: #3e28e9;
+        border-color: #b9b6b6;
+        z-index: 3;
+        box-shadow: 60px  teal;
 
          .Forminput {
             margin-bottom: 5%;
-            padding: 20px ;
-
+            padding-left: 20px ;
+            padding-right: 20px;
+            padding-top: 40px;
+            padding-bottom: 20px;
             input[type=text],
             select,
             textarea {
@@ -159,10 +163,11 @@ export default {
 
             button {
                 width: auto;
+                border: none;
                 border-radius: 5px;
                 padding: 10px;
                 font-size: 1em;
-                background-color: rgba(#8273f0, 0.9);
+                background-color: rgba(#ec6c16, 0.9);
                 color: rgba(#f3f2f2, 1.0);
                 cursor: pointer;
 
