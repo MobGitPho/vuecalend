@@ -1,11 +1,8 @@
 <template>
     <div class="acceuil">
         <div class="brand"> CALENDRIER
-
-
         </div>
         <div class="linebrand">
-
         </div>
         <div class=" navbar">
             <div class="navl">

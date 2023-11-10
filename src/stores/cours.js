@@ -9,6 +9,9 @@ export const useCourStore = defineStore('cours', {
       ? JSON.parse(localStorage.getItem('coursChoix'))
       : []
   }),
+  persist: {
+    storage: localStorage,
+  },
   actions: {
     addChoice(tab, hor, jr, i) {
       let resultadd = []
