@@ -9,7 +9,7 @@ const router = createRouter({
     {
       path: '/vuecalend/',
       name: 'home',
-      component:  LoginView
+      component: LoginView
     },
     {
       path: '/vuecalend/calendrier',

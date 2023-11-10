@@ -17,7 +17,7 @@
 
                             <!--label for="lname">Email</label-->
                             <input type="email" placeholder="Email" id="" name="Email" v-model="mail">
-                            <label id="femail"  class="falseM"></label><br>
+                            <label id="femail" class="falseM"></label><br>
 
                             <!--label for="lname">Mot de Passe</label-->
                             <input type="password" placeholder="Password" id="" name="Nom" v-model="password">
@@ -87,8 +87,8 @@ export default {
 <style lang="scss" scoped>
 .loginborder {
     //border:  1px solid black ;
-   // border: 1px solid black;
-    
+    // border: 1px solid black;
+
     border-radius: 5px;
     height: auto;
     width: auto;
@@ -110,14 +110,15 @@ export default {
         border-radius: 5px;
         border-color: #b9b6b6;
         z-index: 3;
-        box-shadow: 60px  teal;
+        box-shadow: 60px teal;
 
-         .Forminput {
+        .Forminput {
             margin-bottom: 5%;
-            padding-left: 20px ;
+            padding-left: 20px;
             padding-right: 20px;
             padding-top: 40px;
             padding-bottom: 20px;
+
             input[type=text],
             select,
             textarea {

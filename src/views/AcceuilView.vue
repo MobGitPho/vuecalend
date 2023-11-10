@@ -442,9 +442,9 @@ export default {
                         color: black;
                         //padding: 5px;
                         padding-top: 10px;
-                    padding-bottom: 10px;
-                    padding-left: 10px;
-                    padding-right: 10px;
+                        padding-bottom: 10px;
+                        padding-left: 10px;
+                        padding-right: 10px;
 
                         &.active {
                             background-color: #fd0c2c;
