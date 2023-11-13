@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import mesProgram from './program.json'
+
 export const useCourStore = defineStore('cours', {
   state: () => ({
     coursdb: mesProgram,
@@ -10,7 +11,8 @@ export const useCourStore = defineStore('cours', {
       : []
   }),
   persist: {
-    storage: localStorage,
+    key: 'myStore',
+    storage: localStorage
   },
   actions: {
     addChoice(tab, hor, jr, i) {
@@ -43,7 +45,7 @@ export const useCourStore = defineStore('cours', {
           localStorage.setItem('coursChoix', JSON.stringify(this.courChoix))
           resultadd = JSON.parse(localStorage.getItem('coursChoix'))
         } else {
-          console.log('CR EXIST idc NOT IDTQ')
+          //console.log('CR EXIST idc NOT IDTQ')
         }
       } else {
         // Le cours n'existe pas dans les courChoix
@@ -51,10 +53,10 @@ export const useCourStore = defineStore('cours', {
 
         if (del != undefined) {
           let delc = this.courChoix.find((p) => p.idci == del.idci)
-          console.log('delc', delc)
+          //console.log('delc', delc)
           let posdelc = this.courChoix.indexOf(delc)
 
-          console.log('posdelc', posdelc)
+          //console.log('posdelc', posdelc)
 
           this.courChoix.splice(posdelc, 1)
 
