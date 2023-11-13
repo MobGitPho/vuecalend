@@ -417,7 +417,7 @@ export default {
                 .horairecol {
                     cursor: pointer;
                     color: black;
-                    font-size: 0.8em;
+                    font-size: 1em;
                     text-align: center;
                     padding: 5px;
                     width: auto;
@@ -447,6 +447,8 @@ export default {
                             background-color: #fd0c2c;
                             color: rgba(255, 255, 255, 1);
                             text-decoration: none;
+                            font-size: 1.2em;
+                            font-weight: bold;
 
                         }
                     }

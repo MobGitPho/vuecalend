@@ -12,7 +12,8 @@ export const useCourStore = defineStore('cours', {
   }),
   persist: {
     key: 'myStore',
-    storage: localStorage
+    storage: localStorage,
+  
   },
   actions: {
     addChoice(tab, hor, jr, i) {
