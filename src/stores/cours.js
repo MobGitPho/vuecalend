@@ -1,10 +1,9 @@
 import { defineStore } from 'pinia'
-import mesProgram from './program.json'
+//import mesProgram from './program.json'
 
 export const useCourStore = defineStore('cours', {
   state: () => ({
-    coursdb: mesProgram,
-
+    //coursdb: mesProgram,
     fd: localStorage.getItem('coursdb') ? JSON.parse(localStorage.getItem('coursdb')) : [],
     courChoix: localStorage.getItem('coursChoix')
       ? JSON.parse(localStorage.getItem('coursChoix'))
@@ -12,8 +11,7 @@ export const useCourStore = defineStore('cours', {
   }),
   persist: {
     key: 'myStore',
-    storage: localStorage,
-  
+    storage: localStorage
   },
   actions: {
     addChoice(tab, hor, jr, i) {
@@ -76,7 +74,6 @@ export const useCourStore = defineStore('cours', {
 
       return resultadd
     },
-
     mesCoursChoix(cour, hor, jr, act) {
       this.courChoix = localStorage.getItem('coursChoix')
         ? JSON.parse(localStorage.getItem('coursChoix'))
@@ -116,15 +113,8 @@ export const useCourStore = defineStore('cours', {
       state.courChoix = localStorage.getItem('coursChoix')
         ? JSON.parse(localStorage.getItem('coursChoix'))
         : []
-      //let active = []
-      //let nb = state.NbCourChoice
-      //console.log("nb", nb);
-      //console.log("state.courChoix", state.courChoix)
       let fnd = state.courChoix.filter((p) => p.activ == 1)
-
-      //console.log("mesCoursActiv", fnd);
       const dataToReturn = fnd.map((item) => item.idci)
-      //console.log({dataToReturn})
       return dataToReturn
     },
     sommeTotal: (state) => {

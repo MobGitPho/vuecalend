@@ -252,9 +252,19 @@
 <script>
 import { ref } from 'vue';
 import { useCourStore } from '../stores/cours.js';
+import axios from 'axios';
 export default {
 
+    mounted() {
+        axios.get("program.json")
+            .then((response) => {
+                this.allCours = response.data
+               
+            });
+    },
+
     setup() {
+        
         const coursDb = useCourStore()
         const allCours = ref('')
         const mesCours = ref([])
@@ -266,16 +276,10 @@ export default {
         TotalSom.value = coursDb.sommeTotal ? coursDb.sommeTotal : 0
         activCour.value = coursDb.mesCoursActiv
 
-
         const addUnCour = function (cour, hor, jour, i) {
             mesCours.value = coursDb.addChoice(cour, hor, jour, i)
             TotalSom.value = coursDb.totalSomme(mesCours.value)
-
             activCour.value = coursDb.mesCoursActiv
-            //console.log("activCour", (Object.values(activCour.value)));
-            //let mid = (`${hor}-${jour}-${i}`)
-            //console.log("activCourInclude", (Object.values(activCour.value)).includes(mid));
-            //console.log("idci", mid);
         }
 
         return {
@@ -285,7 +289,6 @@ export default {
             addUnCour,
             TotalSom,
             activCour,
-
 
         }
     }
