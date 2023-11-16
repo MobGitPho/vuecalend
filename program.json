@@ -1,0 +1,94 @@
+[
+  {
+    "id": 1,
+    "horaire": "7 : 10",
+    "cours": {
+      "Lundi": [],
+      "Mardi": [
+        { "id": "S1", "name": "Salsa 1", "price": 10, "jour": 2 },
+        { "id": "K1", "name": "Kiz 1", "price": 10, "jour": 2 },
+        { "id": "S4", "name": "Salsa 4", "price": 40, "jour": 2 }
+      ],
+      "Mercredi": [
+        { "id": "B1", "name": "Bachatat 1", "price": 10, "jour": 3 },
+        { "id": "R1", "name": "Rueda 1", "price": 10, "jour": 3 },
+        { "id": "R2", "name": "Rueda 2", "price": 20, "jour": 3 }
+      ],
+      "Jeudi": [
+        { "id": "S1", "name": "Salsa 1", "price": 10, "jour": 4 },
+        { "id": "R2", "name": "Rueda 2", "price": 10, "jour": 4 },
+        { "id": "B3", "name": "Bachatat 3", "price": 30, "jour": 4 }
+      ],
+      "Vendredi": [],
+      "Samedi": [],
+      "Dimanche": [
+        { "id": "S1", "name": "Salsa 1", "price": 10, "jour": 7 },
+        { "id": "S2", "name": "Salsa 2", "price": 20, "jour": 7 }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "horaire": "11 : 14",
+    "cours": {
+      "Lundi": [],
+      "Mardi": [
+        { "id": "K2", "name": "Kiz 2", "price": 20, "jour": 2 },
+        { "id": "R3", "name": "Rueda 3", "price": 30, "jour": 2 },
+        { "id": "R4", "name": "Rueda 4", "price": 40, "jour": 2 }
+      ],
+      "Mercredi": [
+        { "id": "B2", "name": "Bachatat 2", "price": 20, "jour": 3 },
+        { "id": "S3", "name": "Salsa 3", "price": 30, "jour": 3 },
+        { "id": "S1", "name": "Salsa 1", "price": 10, "jour": 3 }
+      ],
+      "Jeudi": [{ "id": "S2", "name": "Salsa 2", "price": 20, "jour": 4 }],
+      "Vendredi": [],
+      "Samedi": [],
+      "Dimanche": [
+        { "id": "B1", "name": "Bachatat 1", "price": 10, "jour": 7 },
+        { "id": "R1", "name": "Rueda 1", "price": 10, "jour": 7 }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "horaire": "16 : 19",
+    "cours": {
+      "Lundi": [],
+      "Mardi": [
+        { "id": "K2", "name": "Kiz 2", "price": 20, "jour": 2 },
+        { "id": "R3", "name": "Rueda 3", "price": 30, "jour": 2 },
+        { "id": "R4", "name": "Rueda 4", "price": 40, "jour": 2 }
+      ],
+      "Mercredi": [
+        { "id": "B2", "name": "Bachatat 2", "price": 20, "jour": 3 },
+        { "id": "S3", "name": "Salsa 3", "price": 30, "jour": 3 },
+        { "id": "S1", "name": "Salsa 1", "price": 10, "jour": 3 }
+      ],
+      "Jeudi": [{ "id": "S2", "name": "Salsa 2", "price": 20, "jour": 4 }],
+      "Vendredi": [],
+      "Samedi": [],
+      "Dimanche": [
+        { "id": "B1", "name": "Bachatat 1", "price": 10, "jour": 7 },
+        { "id": "R1", "name": "Rueda 1", "price": 10, "jour": 7 }
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "horaire": "20 : 22",
+    "cours": {
+      "Lundi": [],
+      "Mardi": [
+        { "id": "K2", "name": "Kiz 2", "price": 20, "jour": 2 },
+        { "id": "R3", "name": "Rueda 3", "price": 30, "jour": 2 }
+      ],
+      "Mercredi": [{ "id": "B2", "name": "Bachatat 2", "price": 20, "jour": 3 }],
+      "Jeudi": [],
+      "Vendredi": [],
+      "Samedi": [],
+      "Dimanche": []
+    }
+  }
+]
